@@ -1,10 +1,23 @@
 package io.github.masachi.utils;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.List;
 
+@Component
 public class PolicyUtils {
+
+    private static String contextPath;
+
+    @Value("${server.servlet.context-path:''}")
+    public void setContextPath(String contextPath) {
+        PolicyUtils.contextPath = contextPath;
+    }
 
     public static Boolean checkPolicy(HttpServletRequest request, String operations, String resources) {
         Boolean checkVerbResult = checkVerb(request.getMethod(), operations);
@@ -51,7 +64,7 @@ public class PolicyUtils {
             return true;
         }
 
-        String requestUri = request.getRequestURI();
+        String requestUri = request.getRequestURI().replace(contextPath, "");
 
         //是否所有的都包含
         if ("*".equalsIgnoreCase(resource)) {
