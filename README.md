@@ -1,4 +1,4 @@
-## SpringBoot Template
+## Masachi Backend Core
 
 Inspired by Mr. Fu
 
