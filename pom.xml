@@ -37,6 +37,11 @@
         <!--            <id>rdc-snapshots</id>-->
         <!--            <url>https://packages.aliyun.com/maven/repository/2166462-snapshot-fn64cY/</url>-->
         <!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>github</id>-->
+<!--            <name>GitHub OWNER Apache Maven Packages</name>-->
+<!--            <url>https://maven.pkg.github.com/masachi/lowb-backend-core</url>-->
+<!--        </repository>-->
     </distributionManagement>
 
     <dependencyManagement>
