@@ -33,6 +33,7 @@ Inspired by Mr. Fu
 - [x] HTTP/2 w/o testing ```目前没测试出支持，会报错 socket hang up```
 - [x] Parameter Validation via ```spring-boot-starter-validation```
 - [x] Scheduler w/o testing
+- [ ] 幂等参数生成
 
 ### Feature
 - Request & Response Encryption

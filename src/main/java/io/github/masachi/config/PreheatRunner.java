@@ -1,6 +1,6 @@
 package io.github.masachi.config;
 
-import io.github.masachi.condition.MySQLCondition;
+import io.github.masachi.condition.SQLCondition;
 import io.github.masachi.utils.mysql.PreheatHelper;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +10,10 @@ import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
 @Component
-@Conditional(MySQLCondition.class)
+@Conditional(SQLCondition.class)
 @ConditionalOnBean(PreheatHelper.class)
 @Log4j2
-public class MySQLPreheatRunner implements CommandLineRunner {
+public class PreheatRunner implements CommandLineRunner {
 
     @Autowired
     PreheatHelper preheatHelper;
