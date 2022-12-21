@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.masachi</groupId>
     <artifactId>backend-core</artifactId>
-    <version>1.0.2-RELEASE</version>
+    <version>1.0.3-RELEASE</version>
     <packaging>jar</packaging>
 
     <name>masachi-backend-core</name>
