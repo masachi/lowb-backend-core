@@ -1,10 +1,9 @@
-package io.github.masachi.utils.mysql;
+package io.github.masachi.utils.preheat;
 
 
 import io.github.masachi.condition.SQLCondition;
 import io.github.masachi.utils.BaseUtil;
-import io.github.masachi.utils.mysql.mapper.MySQLPreheatMapper;
-import io.github.masachi.utils.mysql.mapper.PreheatMapper;
+import io.github.masachi.utils.preheat.mapper.PreheatMapper;
 import io.github.masachi.vo.RespVO;
 import lombok.extern.log4j.Log4j2;
 import org.mybatis.spring.SqlSessionTemplate;

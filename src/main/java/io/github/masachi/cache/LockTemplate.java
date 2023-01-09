@@ -1,10 +1,12 @@
 package io.github.masachi.cache;
 
+import io.github.masachi.condition.RedisCondition;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Supplier;
@@ -16,6 +18,7 @@ import java.util.function.Supplier;
 @Component
 @Data
 @AllArgsConstructor
+@Conditional(RedisCondition.class)
 public class LockTemplate {
 
     @Autowired

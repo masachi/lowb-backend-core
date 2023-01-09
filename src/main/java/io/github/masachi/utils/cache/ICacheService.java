@@ -1,14 +1,14 @@
-package io.github.masachi.utils.redis;
+package io.github.masachi.utils.cache;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * ICacheService is the interface for the underline cache service (e.g. redis, memcached)
  *
  * @param <T>
  */
-@Deprecated
 public interface ICacheService<T> {
 
     T fetch(String key);
@@ -29,6 +29,8 @@ public interface ICacheService<T> {
     boolean save(Map<String, T> key2Value, int timeOut);
 
     boolean save(String key, T value, int timeOut);
+
+    boolean save(String key, T value, int timeOut, TimeUnit timeUnit);
 
     boolean delete(String key);
 

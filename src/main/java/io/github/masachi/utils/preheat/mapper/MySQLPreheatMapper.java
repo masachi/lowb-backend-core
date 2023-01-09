@@ -1,4 +1,4 @@
-package io.github.masachi.utils.mysql.mapper;
+package io.github.masachi.utils.preheat.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

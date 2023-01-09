@@ -1,7 +1,7 @@
 package io.github.masachi.config;
 
 import io.github.masachi.condition.SQLCondition;
-import io.github.masachi.utils.mysql.PreheatHelper;
+import io.github.masachi.utils.preheat.PreheatHelper;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

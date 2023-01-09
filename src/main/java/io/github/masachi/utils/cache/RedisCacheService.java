@@ -1,11 +1,10 @@
-package io.github.masachi.utils.redis;
+package io.github.masachi.utils.cache;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.google.common.collect.Lists;
 import io.github.masachi.condition.RedisCondition;
 import io.github.masachi.utils.BaseUtil;
-import lombok.Data;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,7 +16,6 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-@Deprecated
 @Log4j2
 @Component
 @Conditional(RedisCondition.class)
@@ -153,6 +151,12 @@ public class RedisCacheService<T> implements ICacheService<T> {
     @Override
     public boolean save(String key, T value, int timeOut) {
         redisTemplate.opsForValue().set(key, value, timeOut, TimeUnit.SECONDS);
+        return true;
+    }
+
+    @Override
+    public boolean save(String key, T value, int timeOut, TimeUnit timeUnit) {
+        redisTemplate.opsForValue().set(key, value, timeOut, timeUnit);
         return true;
     }
 

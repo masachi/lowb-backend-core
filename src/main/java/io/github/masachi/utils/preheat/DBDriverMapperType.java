@@ -1,9 +1,9 @@
-package io.github.masachi.utils.mysql;
+package io.github.masachi.utils.preheat;
 
 
-import io.github.masachi.utils.mysql.mapper.DMPreheatMapper;
-import io.github.masachi.utils.mysql.mapper.MySQLPreheatMapper;
-import io.github.masachi.utils.mysql.mapper.PreheatMapper;
+import io.github.masachi.utils.preheat.mapper.DMPreheatMapper;
+import io.github.masachi.utils.preheat.mapper.MySQLPreheatMapper;
+import io.github.masachi.utils.preheat.mapper.PreheatMapper;
 
 /**
  * 数据源驱动
@@ -11,7 +11,7 @@ import io.github.masachi.utils.mysql.mapper.PreheatMapper;
 public enum DBDriverMapperType {
 
 
-    MYSQL("com.mysql.jdbc.Driver", MySQLPreheatMapper.class),
+    MYSQL("com.mysql.cj.jdbc.Driver", MySQLPreheatMapper.class),
 
     DM("dm.jdbc.driver.DmDriver", DMPreheatMapper.class);
 

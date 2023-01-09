@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.masachi</groupId>
     <artifactId>backend-core</artifactId>
-    <version>1.0.3-RELEASE</version>
+    <version>1.0.4-RELEASE</version>
     <packaging>jar</packaging>
 
     <name>masachi-backend-core</name>
@@ -293,17 +293,24 @@
         </dependency>
 
         <!-- redis-->
+        <!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
         <dependency>
             <groupId>org.redisson</groupId>
-            <artifactId>redisson-spring-boot-starter</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                    <groupId>org.springframework.boot</groupId>
-                </exclusion>
-            </exclusions>
-            <version>3.17.7</version>
+            <artifactId>redisson</artifactId>
+            <version>3.19.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <!-- for Spring Data Redis v.2.6.x -->
+            <artifactId>redisson-spring-data-26</artifactId>
+            <version>3.19.0</version>
+        </dependency>
+
 
         <!--Swagger-->
 
