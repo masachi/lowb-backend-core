@@ -4,9 +4,11 @@ import com.alibaba.fastjson.JSON;
 import com.google.common.collect.ImmutableMap;
 import io.github.masachi.exceptions.InvalidateArgumentException;
 import io.github.masachi.exceptions.ServerErrorException;
+import io.github.masachi.utils.mail.MailHelper;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.skywalking.apm.toolkit.trace.TraceContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.RedisConnectionFailureException;
 import org.springframework.http.HttpMethod;
@@ -269,10 +271,10 @@ public class AlarmUtil {
                 .put("DataRetrievalFailureException", "某些数据不能被检测到，例如不能通过关键字找到一条记录")
                 .put("DeadlockLoserDataAccessException", "当前的操作因为死锁而失败")
                 .put("IncorrectUpdateSemanticsDataAccessException", "Update时发生某些没有预料到的情况，例如更改超过预期的记录数。当这个异常被抛出时，执行着的事务不会被回滚")
-                .put("InvalidDataAccessApiusageException", "一个数据访问的JAVA API没有正确使用，例如必须在执行前编译好的查询编译失败了")
+                .put("InvalidDataAccessApiUsageException", "一个数据访问的JAVA API没有正确使用，例如必须在执行前编译好的查询编译失败了")
                 .put("invalidDataAccessResourceUsageException", "错误使用数据访问资源，例如用错误的SQL语法访问关系型数据库")
                 .put("OptimisticLockingFailureException", "乐观锁的失败。这将由ORM工具或用户的DAO实现抛出")
-                .put("TypemismatchDataAccessException", "Java类型和数据类型不匹配，例如试图把String类型插入到数据库的数值型字段中")
+                .put("TypeMismatchDataAccessException", "Java类型和数据类型不匹配，例如试图把String类型插入到数据库的数值型字段中")
                 .put("UncategorizedDataAccessException", "有错误发生，但无法归类到某一更为具体的异常中")
                 .put("UncategorizedSQLException", "查询语句异常，可能查询语句写错，或者是你的映射的类和或数据中与表不对应，检查你的映射配置文件")
                 .build();

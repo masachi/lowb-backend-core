@@ -35,6 +35,7 @@ Inspired by Mr. Fu
 - [x] Scheduler w/o testing
 - [x] 幂等参数生成
 - [ ] SpEL
+- [x] Mail Send w/o testing
 
 ### Feature
 - Request & Response Encryption
