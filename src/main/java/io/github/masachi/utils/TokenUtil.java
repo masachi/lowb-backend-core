@@ -4,7 +4,10 @@ import io.github.masachi.config.TokenConfig;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Encoders;
+import io.jsonwebtoken.security.Keys;
 
+import javax.crypto.SecretKey;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -56,5 +59,11 @@ public class TokenUtil {
 
     public static Map<String, Object> getDataFromToken(String token) {
         return Jwts.parser().setSigningKey(TokenConfig.TOKEN_SECRET).parseClaimsJws(token).getBody();
+    }
+
+    public static void main(String[] args) {
+        SecretKey key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+        String secretString = Encoders.BASE64.encode(key.getEncoded());
+        System.out.println(secretString);
     }
 }

@@ -332,6 +332,25 @@
             </exclusions>
         </dependency>
 
+<!--        https://github.com/mybatis-mapper/mapper-->
+        <dependency>
+            <groupId>io.mybatis</groupId>
+            <artifactId>mybatis-mapper</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <!-- 使用 Service 层封装时 -->
+        <dependency>
+            <groupId>io.mybatis</groupId>
+            <artifactId>mybatis-service</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <!-- 使用 ActiveRecord 模式时 -->
+        <dependency>
+            <groupId>io.mybatis</groupId>
+            <artifactId>mybatis-activerecord</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+
         <!--    kafka-->
         <dependency>
             <groupId>org.springframework.kafka</groupId>
