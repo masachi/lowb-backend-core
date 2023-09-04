@@ -1,8 +1,5 @@
 package io.github.masachi.utils.mongodb;
 
-/**
- * @author zhang.peng802
- */
 public interface IPersistentSupport {
 
     /**
