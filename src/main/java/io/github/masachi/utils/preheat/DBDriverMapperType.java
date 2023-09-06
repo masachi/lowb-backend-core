@@ -3,6 +3,7 @@ package io.github.masachi.utils.preheat;
 
 import io.github.masachi.utils.preheat.mapper.DMPreheatMapper;
 import io.github.masachi.utils.preheat.mapper.MySQLPreheatMapper;
+import io.github.masachi.utils.preheat.mapper.PGSQLPreheatMapper;
 import io.github.masachi.utils.preheat.mapper.PreheatMapper;
 
 /**
@@ -11,9 +12,11 @@ import io.github.masachi.utils.preheat.mapper.PreheatMapper;
 public enum DBDriverMapperType {
 
 
-    MYSQL("com.mysql.cj.jdbc.Driver", MySQLPreheatMapper.class),
+    MYSQL("com.mysql.jdbc.jdbc2.optional.MysqlDataSource", MySQLPreheatMapper.class),
 
-    DM("dm.jdbc.driver.DmDriver", DMPreheatMapper.class);
+    DM("dm.jdbc.driver.DmDriver", DMPreheatMapper.class),
+
+    PGSQL("org.postgresql.ds.PGSimpleDataSource", PGSQLPreheatMapper.class);
 
 
     private String driver;

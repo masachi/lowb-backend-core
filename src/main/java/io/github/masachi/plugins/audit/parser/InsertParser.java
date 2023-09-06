@@ -1,9 +1,7 @@
-package io.github.masachi.plugins.audit.mysql.parser;
+package io.github.masachi.plugins.audit.parser;
 import io.github.masachi.plugins.audit.dto.*;
 import io.github.masachi.plugins.audit.utils.MybatisUtils;
-import io.github.masachi.utils.BaseUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlCommandType;

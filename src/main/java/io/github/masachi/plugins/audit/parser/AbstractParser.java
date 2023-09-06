@@ -1,4 +1,4 @@
-package io.github.masachi.plugins.audit.mysql.parser;
+package io.github.masachi.plugins.audit.parser;
 
 import io.github.masachi.plugins.audit.DataParser;
 import io.github.masachi.plugins.audit.dto.ChangeColumnData;

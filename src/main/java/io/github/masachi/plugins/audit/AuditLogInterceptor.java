@@ -1,4 +1,4 @@
-package io.github.masachi.plugins.audit.mysql;
+package io.github.masachi.plugins.audit;
 
 import io.github.masachi.plugins.audit.*;
 import io.github.masachi.plugins.audit.dto.ChangeRowData;
@@ -21,7 +21,7 @@ import java.util.List;
         )
 })
 @Log4j2
-public class MySqlAuditLogInterceptor implements Interceptor {
+public class AuditLogInterceptor implements Interceptor {
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
         // 拦截目标
@@ -32,8 +32,7 @@ public class MySqlAuditLogInterceptor implements Interceptor {
             MappedStatement ms = (MappedStatement) args[0];
             Object parameter = args[1];
             SqlCommandType sqlCommandType = ms.getSqlCommandType();
-            MysqlDataSourceParser mysqlDataSourceParser = new MysqlDataSourceParser();
-            DataParser dataParser = mysqlDataSourceParser.getDataParser(sqlCommandType);
+            DataParser dataParser = DataParserHolder.getDataParser(sqlCommandType);
             MybatisInvocation mybatisInvocation = new MybatisInvocation(args, ms, parameter, (Executor) target);
             boolean error = false;
             List<ChangeRowData> changeRows = null;

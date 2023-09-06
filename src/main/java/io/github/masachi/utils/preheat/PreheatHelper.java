@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 @ConditionalOnClass(name = "org.mybatis.spring.SqlSessionTemplate")
 public class PreheatHelper {
 
-    @Value("${spring.datasource.driver-class-name}")
+    @Value("${spring.datasource.dataSourceClassName}")
     private String driverClassName;
 
     @Autowired

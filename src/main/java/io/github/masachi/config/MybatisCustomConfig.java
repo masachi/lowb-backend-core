@@ -1,6 +1,6 @@
 package io.github.masachi.config;
 
-import io.github.masachi.plugins.audit.mysql.MySqlAuditLogInterceptor;
+import io.github.masachi.plugins.audit.AuditLogInterceptor;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.ObjectUtils;
@@ -74,7 +74,7 @@ public class MybatisCustomConfig {
             factory.setConfigurationProperties(this.properties.getConfigurationProperties());
         }
         // plugins
-        MySqlAuditLogInterceptor updateAuditLogInterceptor = new MySqlAuditLogInterceptor();
+        AuditLogInterceptor updateAuditLogInterceptor = new AuditLogInterceptor();
         if (!ObjectUtils.isEmpty(this.interceptors)) {
             List<Interceptor> interceptorList = Arrays.asList(this.interceptors);
             interceptorList.add(updateAuditLogInterceptor);
