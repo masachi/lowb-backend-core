@@ -36,6 +36,7 @@ Inspired by Mr. Fu
 - [x] 幂等参数生成
 - [ ] SpEL
 - [x] Mail Send w/o testing
+- [x] MySql Data Modify Interceptor
 
 ### Feature
 - Request & Response Encryption
