@@ -38,6 +38,7 @@ Inspired by Mr. Fu
 - [ ] SpEL
 - [x] Mail Send w/o testing
 - [x] MySql / PGSQL Data Modify Interceptor
+- [x] Database Exception Interceptor
 
 ### Feature
 - Request & Response Encryption
