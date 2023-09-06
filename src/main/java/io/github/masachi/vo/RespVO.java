@@ -44,7 +44,7 @@ public class RespVO<T> implements Serializable {
 
     private boolean success = false;
 
-    private boolean encrypted = true;
+    private boolean encrypted = false;
 
     /**
      * 是否操作成功 * @return
