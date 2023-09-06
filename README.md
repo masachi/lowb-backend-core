@@ -5,6 +5,7 @@ Inspired by Mr. Fu
 ### TODO List
 
 - [x] MySQL
+- [x] PGSQL
 - [x] Kafka
 - [x] Redis
 - [x] GitHub Pager
@@ -36,7 +37,7 @@ Inspired by Mr. Fu
 - [x] 幂等参数生成
 - [ ] SpEL
 - [x] Mail Send w/o testing
-- [x] MySql Data Modify Interceptor
+- [x] MySql / PGSQL Data Modify Interceptor
 
 ### Feature
 - Request & Response Encryption
