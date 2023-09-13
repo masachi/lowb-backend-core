@@ -27,6 +27,7 @@ Inspired by Mr. Fu
 - [x] Rate Limit
 - [x] MinIO w/o testing
 - [x] Sentinel ```仅仅加入了pom中，一般从sentinel admin 中配置相关规则生效，除非大型系统，不然不建议使用```
+- [x] Sentinel w/o dashboard
 - [x] WebSocket
 - [ ] WebFlux ```Servlet迁移到WebFlux难度很大```
 - [x] Caffeine

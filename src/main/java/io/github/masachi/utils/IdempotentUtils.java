@@ -11,7 +11,7 @@ public class IdempotentUtils {
     private static CacheTemplate<String> cacheTemplate;
 
     @Autowired
-    public static void setCacheTemplate(CacheTemplate<String> cacheTemplate) {
+    public void setCacheTemplate(CacheTemplate<String> cacheTemplate) {
         IdempotentUtils.cacheTemplate = cacheTemplate;
     }
 

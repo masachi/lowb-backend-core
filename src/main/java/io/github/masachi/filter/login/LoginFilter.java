@@ -6,6 +6,7 @@ import io.github.masachi.annotation.login.NeedLogin;
 import io.github.masachi.annotation.login.ParseUserInfo;
 import io.github.masachi.data.CheckResult;
 import io.github.masachi.utils.BaseUtil;
+import io.github.masachi.utils.ResponseUtil;
 import io.github.masachi.utils.SpringBeanUtils;
 import io.github.masachi.vo.RespVO;
 import lombok.extern.log4j.Log4j2;
@@ -62,17 +63,9 @@ public class LoginFilter implements HandlerInterceptor {
             return true;
         }
 
-        wrapResponse(request, response);
+        ResponseUtil.wrapResponse(request, response);
         response.getWriter().write(JSON.toJSONString(RespVO.error(checkResult.getMessage())));
         return false;
-    }
-
-    private void wrapResponse(HttpServletRequest request, HttpServletResponse response) {
-        response.setStatus(401);
-        response.setCharacterEncoding("UTF-8");
-        response.setContentType("application/json; charset=utf-8");
-        response.setHeader("Access-Control-Allow-Credentials", "true");
-        response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
     }
 
     private NeedLogin getNeedLoginAnnotation(HandlerMethod handlerMethod) {
