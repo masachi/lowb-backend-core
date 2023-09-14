@@ -482,18 +482,6 @@
             <version>1.6.2</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.jobrunr</groupId>-->
-<!--            <artifactId>jobrunr-spring-boot-2-starter</artifactId>-->
-<!--            <version>6.3.0</version>-->
-<!--        </dependency>-->
-
-        <dependency>
-            <groupId>org.jobrunr</groupId>
-            <artifactId>jobrunr</artifactId>
-            <version>6.3.0</version>
-        </dependency>
-
     </dependencies>
 
 
