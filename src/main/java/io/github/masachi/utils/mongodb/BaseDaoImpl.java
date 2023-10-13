@@ -25,9 +25,9 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 @Log4j2
+@Conditional(MongoDBCondition.class)
 @Primary
 @Repository
-@Conditional(MongoDBCondition.class)
 public class BaseDaoImpl<T> implements IBaseDao<T> {
 
     @Autowired

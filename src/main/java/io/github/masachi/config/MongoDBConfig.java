@@ -21,9 +21,9 @@ import org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory;
 
 import java.util.Objects;
 
+@Conditional(MongoDBCondition.class)
 @Configuration
 @DependsOn("springBeanUtils")
-@Conditional(MongoDBCondition.class)
 public class MongoDBConfig {
 
     /**
@@ -38,6 +38,7 @@ public class MongoDBConfig {
     private String database;
 
     @Primary
+    @Conditional(MongoDBCondition.class)
     @Bean(name = "mongoTemplate")
     public MongoTemplate getMongoTemplatePrimary() {
         log.info("初始化 -> [{}]", "MongoTemplate init Start");
